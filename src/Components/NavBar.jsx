@@ -1,4 +1,3 @@
-import React from "react";
 import CardWidget from "./CardWidget";
 import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Button} from "@chakra-ui/react";
 
