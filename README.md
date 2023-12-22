@@ -2,4 +2,4 @@
 
 **_Proyecto de React de mi Ecommerce_**
 
-![s](https://drive.google.com/drive/home?hl=es-419)
+![chrome-capture-2023-12-22](https://github.com/Fpelourson/React-Coderhouse/assets/120145930/fb7c233a-7be1-4c52-9ba2-ff1ba8070884)
