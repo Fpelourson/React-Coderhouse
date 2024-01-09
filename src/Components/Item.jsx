@@ -2,6 +2,7 @@ import { Card, Image, CardBody, CardFooter, Stack, Heading, Divider, ButtonGroup
 import { Link } from 'react-router-dom';
 
 
+
 const Item = ({ id, titulo, imagen }) => {
   return (
     <Card maxW="sm">

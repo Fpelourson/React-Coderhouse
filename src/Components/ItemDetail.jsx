@@ -2,8 +2,9 @@ import { Card, Image, CardBody, CardFooter, Stack, Heading, Text, Divider, Butto
 import { useParams } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
-const ItemDetail = ({ producto, imagen }) => {
+const ItemDetail = ({ producto }) => {
 
+    
     
 
   return (

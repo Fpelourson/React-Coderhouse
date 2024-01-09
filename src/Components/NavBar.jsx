@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import CardWidget from "./CardWidget";
 import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Text } from "@chakra-ui/react";
 import { RiComputerFill } from "react-icons/ri";
+import { Image } from '@chakra-ui/react'
+import logo from "../assets/logo-dev.png"
+import { AiFillCaretDown } from "react-icons/ai";
 
 
 const NavBar = () => {
@@ -9,8 +12,8 @@ const NavBar = () => {
     <Box bg="#B4B4B4">
       <Flex>
         <Link to={"/"}>
-          <Box p='9' bg='none' display="flex" alignItems="center">
-              <RiComputerFill />Dev Store
+          <Box paddingLeft="20px" m="10px" bg='none' display="flex" alignItems="center">
+              <Image boxSize="70px" src={logo} alt="logo"/>
           </Box>
         </Link>
 
@@ -18,19 +21,19 @@ const NavBar = () => {
 
         <Menu>
           <MenuButton >
-            <Text as="b">Productos</Text>
+            <Text color="#B93D3D" alignItems="center" display="flex" as="b">Ver Productos <Spacer p="5px"/> <AiFillCaretDown /></Text>
           </MenuButton>
           <MenuList bg="#B4B4B4">
             <Link to={'/category/Monitores'}>
-              <MenuItem bg="#B4B4B4">Monitores</MenuItem>
+              <MenuItem color="#B93D3D" bg="#B4B4B4">Monitores</MenuItem>
             </Link>
 
             <Link to={'/category/Teclados'}>
-              <MenuItem bg="#B4B4B4">Teclados</MenuItem>
+              <MenuItem color="#B93D3D" bg="#B4B4B4">Teclados</MenuItem>
             </Link>
 
             <Link to={'/category/Mouse'}>
-              <MenuItem bg="#B4B4B4">Mouse</MenuItem>
+              <MenuItem color="#B93D3D" bg="#B4B4B4">Mouse</MenuItem>
             </Link>
           </MenuList>
         </Menu>
@@ -39,7 +42,7 @@ const NavBar = () => {
 
         <Link to={"/cart"}>
           <Box p="6">
-            <CardWidget />
+            <CardWidget/>
           </Box>
         </Link>
         

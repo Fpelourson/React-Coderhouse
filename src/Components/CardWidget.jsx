@@ -5,7 +5,7 @@ const CardWidget = () => {
   return (
     <div>
       <Flex>
-        <Button bg='none'>
+        <Button color="#B93D3D" bg='none'>
           <MdOutlineLocalGroceryStore />1
         </Button>
       </Flex>
