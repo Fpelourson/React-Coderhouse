@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import Loader from "./Components/Loader";
 
 import { CartProvider } from './Context/CartContext';
+import Collection from "./Components/Collection";
+import Document from "./Components/Document";
 
 
 
@@ -27,6 +29,9 @@ function App () {
   }
   return (
 
+    // <Collection/>
+    // <Document/>
+
     <BrowserRouter>
       <CartProvider>
         <NavBar/>
@@ -39,7 +44,6 @@ function App () {
         </Routes>
       
       
-        <Cart/>
       </CartProvider>
     </BrowserRouter>
   )
