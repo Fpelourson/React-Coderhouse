@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import CardWidget from "./CardWidget";
 import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Text } from "@chakra-ui/react";
-import { RiComputerFill } from "react-icons/ri";
 import { Image } from '@chakra-ui/react'
 import logo from "../assets/logo-dev.png"
 import { AiFillCaretDown } from "react-icons/ai";

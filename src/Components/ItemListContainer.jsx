@@ -28,10 +28,8 @@ const ItemListContainer = () => {
     fetchData()
   }, [])
 
-
-
     const productosFiltrados = products.filter((producto) => producto.categoria === categoryId)
-    console.log(productosFiltrados)
+    
     return (
       <div>
       {

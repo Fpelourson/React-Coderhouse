@@ -2,13 +2,9 @@ import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from 'react'
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
-
-
 const ItemDetailContainer = () => {
   const [data, setData] = useState([])
   
-
-
   useEffect(() => {
     const db = getFirestore()
     const oneItem = collection(db, "Computacion") ;

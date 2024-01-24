@@ -4,7 +4,6 @@ import {
   Button,
   Box,
   Flex,
-  Text,
   Heading,
   Stack,
   CardBody,
@@ -12,6 +11,7 @@ import {
   CardHeader,
   Card,
   Image,
+  Text,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
@@ -32,10 +32,10 @@ const Cart = () => {
                 <Heading m={"1.6rem"} size="xs" textTransform="uppercase">
                   {products.map((producto, indx) => (
                     <Flex alignItems={"center"} p={"1rem"} key={indx}>
-                      <Box marginRight={"1rem"} boxSize="32px">
+                      <Box marginRight={"1rem"} boxSize={"32px"}>
                         <Image
                           src={producto.Imagen}
-                          alt="Dan Abramov"
+                          alt="imagen"
                         />
                       </Box>
                       {producto.Titulo} - Cantidad: {producto.quantity}{" "}
@@ -54,13 +54,13 @@ const Cart = () => {
               </Box>
               <Box>
                 <Heading size="xs" textTransform="uppercase" marginTop={"5rem"}>
-                  <h3>
+                  <Text>
                     precio total = $
                     {products.reduce(
                       (pv, cv) => pv + cv.Precio * cv.quantity,
                       0
                     )}
-                  </h3>
+                  </Text>
                 </Heading>
               </Box>
               <Box>

@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
-//ItemListContainer
 import {collection, getDocs, getFirestore} from "firebase/firestore"
 
 
 const Collection = () => {
     const [products, setProducts] = useState([])
     
-
   useEffect(() => {
-
     const db = getFirestore()
 
     const itemsCollection = collection(db, "Computacion")
@@ -19,8 +16,6 @@ const Collection = () => {
     })
 
     },[])
-
-    
 
   return (
     <div>

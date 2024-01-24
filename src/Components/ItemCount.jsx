@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from "react"; 
 import {Box, Center, Button} from '@chakra-ui/react';
 

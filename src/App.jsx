@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from './Components/Cart'
 import { useState, useEffect } from "react";
 import Loader from "./Components/Loader";
-
 import { CartProvider } from './Context/CartContext';
 import Form from "./Components/Form";
 
@@ -24,9 +23,6 @@ function App () {
     return <Loader/>
   }
   return (
-
-    // <Collection/>
-    // <Document/>
 
     <BrowserRouter>
       <CartProvider>
