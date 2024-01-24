@@ -1,36 +1,82 @@
-import { useContext } from 'react'
-import { CartContext } from '../Context/CartContext'
-import { Button, Box, Center, Flex } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-
-
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
+import {
+  Button,
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Stack,
+  CardBody,
+  StackDivider,
+  CardHeader,
+  Card,
+  Image,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-
-  const { items, removeItem, clear } = useContext(CartContext)
-
-
+  const { products, removeItem, clear } = useContext(CartContext);
 
   return (
     <div>
-      <Flex >
-        <Box m='auto'>
-        {!items.length ? <h2> Sin items <Link to="/"><Button> Ir al inicio</Button></Link></h2>:
-            <>
-            <ol>
-                {items.map(((item, indx) => <li key={indx}>{item.title} - {item.quantity} <Button onClick={()=> removeItem(item.id)}>Remover</Button></li>))}
-            </ol>
-            <h3>precio total = ${items.reduce((pv, cv) => pv + (cv.precio * cv.quantity), 0)}</h3>
-            </>
-        }
-            <div>
-                <Button onClick={clear}>Limpiar carrito</Button>
-            </div>
-        </Box>
+      <Flex>
+        <Card margin={"auto"}>
+          <CardHeader margin={"auto"}>
+            <Heading size="md">Resumen de compra</Heading>
+          </CardHeader>
 
-        </Flex>
+          <CardBody>
+            <Stack divider={<StackDivider />} spacing="4">
+              <Box>
+                <Heading m={"1.6rem"} size="xs" textTransform="uppercase">
+                  {products.map((producto, indx) => (
+                    <Flex alignItems={"center"} p={"1rem"} key={indx}>
+                      <Box marginRight={"1rem"} boxSize="32px">
+                        <Image
+                          src={producto.Imagen}
+                          alt="Dan Abramov"
+                        />
+                      </Box>
+                      {producto.Titulo} - Cantidad: {producto.quantity}{" "}
+                      <Button
+                        borderRadius={"50%"}
+                        bg={"#B93D3D"}
+                        marginLeft={"1rem"}
+                        size={"sm"}
+                        onClick={() => removeItem(producto.id)}
+                      >
+                        X
+                      </Button>
+                    </Flex>
+                  ))}
+                </Heading>
+              </Box>
+              <Box>
+                <Heading size="xs" textTransform="uppercase" marginTop={"5rem"}>
+                  <h3>
+                    precio total = $
+                    {products.reduce(
+                      (pv, cv) => pv + cv.Precio * cv.quantity,
+                      0
+                    )}
+                  </h3>
+                </Heading>
+              </Box>
+              <Box>
+                <Heading size="xs" textTransform="uppercase" marginTop={"1rem"}>
+                  <Button color={"white"} bg={"#B93D3D"} onClick={clear}>Limpiar carrito</Button>
+                  <Link to={"/orden"}>
+                    <Button color={"white"} marginLeft={"2rem"} bg={"#B93D3D"}> Confirmar</Button>
+                  </Link>
+                </Heading>
+              </Box>
+            </Stack>
+          </CardBody>
+        </Card>
+      </Flex>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

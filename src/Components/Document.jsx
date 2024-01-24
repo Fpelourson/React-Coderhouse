@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import {doc, getDoc, getFirestore} from "firebase/firestore"
 import { useParams } from 'react-router-dom'
+import ItemDetail from './ItemDetail'
 
 const Document = () => {
 
@@ -19,10 +20,9 @@ const Document = () => {
         })
     }, [])
   return (
-    <div>
-      Producto: {product.nombre}
-      precio: {product.precio}
-    </div>
+    <ItemDetail oneItem={product}
+
+    />
   )
 }
 

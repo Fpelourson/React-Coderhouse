@@ -6,12 +6,12 @@ const ItemCount = ({stock, initial=0, onAdd}) => {
     const [counter, setCounter]= useState(initial);
     return (
         <Center>
-        <Box>
+        <Box fontWeight='bold'>
         
-            <Button colorScheme='teal' size= 'xs' m='15px' onClick={()=>{setCounter(counter - 1)}} disabled={counter === initial}> - </Button>
+            <Button bg={"#B93D3D"} color={"white"} _hover={"none"} size= 'xs' m='15px' onClick={()=>{setCounter(counter - 1)}} disabled={counter === initial}> - </Button>
             <span>{counter}</span>
-            <Button colorScheme='teal' size= 'xs' m='15px' onClick={()=>{setCounter(counter + 1)}} disabled={counter === stock}> + </Button>
-            <Box m='auto'><Button colorScheme='teal' size= 'xs' onClick={() => onAdd(counter)} disabled={counter === 0}>Agregar al carrito</Button></Box>
+            <Button bg={"#B93D3D"} color={"white"} _hover={"none"} size= 'xs' m='15px' onClick={()=>{setCounter(counter + 1)}} disabled={counter === stock}> + </Button>
+            <Box m='auto'><Button bg={"#B93D3D"} color={"white"} _hover={"none"} size= 'xs' onClick={() => onAdd(counter)} disabled={counter === 0}>Agregar al carrito</Button></Box>
         
         </Box></Center>
     )

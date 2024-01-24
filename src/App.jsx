@@ -1,4 +1,4 @@
-import "./index.css";
+  import "./index.css";
 import ItemListContainer from "./Components/ItemListContainer"
 import NavBar from "./Components/NavBar"
 import ItemDetailContainer from "./Components/ItemDetailContainer";
@@ -8,11 +8,7 @@ import { useState, useEffect } from "react";
 import Loader from "./Components/Loader";
 
 import { CartProvider } from './Context/CartContext';
-import Collection from "./Components/Collection";
-import Document from "./Components/Document";
-
-
-
+import Form from "./Components/Form";
 
 
 function App () {
@@ -41,6 +37,7 @@ function App () {
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
           <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
+          <Route path="/orden" element={<Form/>}/>
         </Routes>
       
       

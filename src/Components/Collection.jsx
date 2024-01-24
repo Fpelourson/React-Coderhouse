@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 //ItemListContainer
 import {collection, getDocs, getFirestore} from "firebase/firestore"
 
+
 const Collection = () => {
     const [products, setProducts] = useState([])
+    
 
   useEffect(() => {
 
@@ -18,17 +20,22 @@ const Collection = () => {
 
     },[])
 
+    
+
   return (
     <div>
       {
         products.map((p) => (
           <div key={p.nombre}>
-            <h2>{p.nombre}</h2>
-            <h3>{p.precio}</h3>
+            <h2>{p.Titulo}</h2>
+            <h3>{p.Precio}</h3>
+            <div>{p.Imagen}</div>
           </div>
+          
         ))
       }
     </div>
+    
   )
 }
 

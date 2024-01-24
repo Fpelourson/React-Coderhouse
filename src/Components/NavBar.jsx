@@ -9,7 +9,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 const NavBar = () => {
   return (
-    <Box bg="#B4B4B4">
+    <Box bg="black">
       <Flex>
         <Link to={"/"}>
           <Box paddingLeft="20px" m="10px" bg='none' display="flex" alignItems="center">
@@ -21,19 +21,19 @@ const NavBar = () => {
 
         <Menu>
           <MenuButton >
-            <Text color="#B93D3D" alignItems="center" display="flex" as="b">Ver Productos <Spacer p="5px"/> <AiFillCaretDown /></Text>
+            <Text color="#B93D3D"  alignItems="center" display="flex" as="b">Ver Productos <Spacer p="5px"/> <AiFillCaretDown /></Text>
           </MenuButton>
-          <MenuList bg="#B4B4B4">
+          <MenuList bg="black">
             <Link to={'/category/Monitores'}>
-              <MenuItem color="#B93D3D" bg="#B4B4B4">Monitores</MenuItem>
+              <MenuItem color="white" bg="black">Monitores</MenuItem>
             </Link>
 
             <Link to={'/category/Teclados'}>
-              <MenuItem color="#B93D3D" bg="#B4B4B4">Teclados</MenuItem>
+              <MenuItem color="white" bg="black">Teclados</MenuItem>
             </Link>
 
             <Link to={'/category/Mouse'}>
-              <MenuItem color="#B93D3D" bg="#B4B4B4">Mouse</MenuItem>
+              <MenuItem color="white" bg="black">Mouse</MenuItem>
             </Link>
           </MenuList>
         </Menu>
