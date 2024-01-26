@@ -48,11 +48,11 @@ const ItemDetail = ({ products })=> {
     <>
       {productFilter.map((producto) => (
         <div key={producto.id}>
-          <Card maxW="25rem" m={"auto"}>
+          <Card maxW={"25rem"} m={"auto"}>
             <CardBody>
               <Image w={"100%"} src={producto.Imagen} alt="imagen" />
-              <Stack mt="6" spacing="3">
-                <Heading size="md" m={"auto"}>
+              <Stack mt={"6"} spacing={"3"}>
+                <Heading size={"md"} m={"auto"}>
                   {producto.Titulo}
                 </Heading>
                 <Text m={"auto"}>{producto.descripcion}</Text>

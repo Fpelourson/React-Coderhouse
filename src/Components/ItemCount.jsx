@@ -7,10 +7,10 @@ const ItemCount = ({stock, initial=0, onAdd}) => {
         <Center>
         <Box fontWeight='bold'>
         
-            <Button bg={"#B93D3D"} color={"white"} _hover={"none"} size= 'xs' m='15px' onClick={()=>{setCounter(counter - 1)}} disabled={counter === initial}> - </Button>
+            <Button bg={"#B93D3D"} color={"white"} _hover={{}} size= 'xs' m='15px' onClick={()=>{setCounter(counter - 1)}} disabled={counter === initial}> - </Button>
             <span>{counter}</span>
-            <Button bg={"#B93D3D"} color={"white"} _hover={"none"} size= 'xs' m='15px' onClick={()=>{setCounter(counter + 1)}} disabled={counter === stock}> + </Button>
-            <Box m='auto'><Button bg={"#B93D3D"} color={"white"} _hover={"none"} size= 'xs' onClick={() => onAdd(counter)} disabled={counter === 0}>Agregar al carrito</Button></Box>
+            <Button bg={"#B93D3D"} color={"white"} _hover={{}} size= 'xs' m='15px' onClick={()=>{setCounter(counter + 1)}} disabled={counter === stock}> + </Button>
+            <Box m='auto'><Button bg={"#B93D3D"} color={"white"} _hover={{}} size= 'xs' onClick={() => onAdd(counter)} disabled={counter === 0}>Agregar al carrito</Button></Box>
         
         </Box></Center>
     )
